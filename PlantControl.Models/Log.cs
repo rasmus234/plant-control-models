@@ -1,4 +1,6 @@
-﻿namespace PlantControl.Models;
+﻿using System;
+
+namespace PlantControl.Models;
 
 public class Log
 {
