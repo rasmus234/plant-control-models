@@ -7,12 +7,13 @@ public class LoggerConfig
     public Soil Soil { get; set; }
 }
 
-public record class Logging(string Id, bool Active, string HubUrl, string RestUrl)
+public record class Logging(string LoggerId, bool Active, string SocketUrl, string RestUrl, string PairingId)
 {
-    public string Id { get; } = Id;
+    public string LoggerId { get; } = LoggerId;
     public bool Active { get; } = Active;
-    public string HubUrl { get; } = HubUrl;
+    public string SocketUrl { get; } = SocketUrl;
     public string RestUrl { get; } = RestUrl;
+    public string PairingId { get; } = PairingId;
 }
 
 public record class Air(float MinHumid, float MaxHumid, float MinTemp, float MaxTemp)
