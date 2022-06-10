@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text.Json.Serialization;
-
-namespace PlantControl.Models;
+﻿namespace PlantControl.Models;
 
 public class Log
 {

@@ -18,14 +18,14 @@ public record class Logging(string LoggerId, bool Active, string SocketUrl, stri
 
 public record class Air(float MinHumid, float MaxHumid, float MinTemp, float MaxTemp)
 {
-    public float MinHumid { get; } = MinHumid;
-    public float MaxHumid { get; } = MaxHumid;
-    public float MinTemp { get; } = MinTemp;
-    public float MaxTemp { get; } = MaxTemp;
+    public float MinHumid { get; set; } = MinHumid;
+    public float MaxHumid { get; set; } = MaxHumid;
+    public float MinTemp { get; set; } = MinTemp;
+    public float MaxTemp { get; set; } = MaxTemp;
 }
 
 public record class Soil(float Moist, float Dry)
 {
-    public float Moist { get; } = Moist;
-    public float Dry { get; } = Dry;
+    public float Moist { get; set; } = Moist;
+    public float Dry { get; set; } = Dry;
 }
