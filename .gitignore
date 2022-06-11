@@ -1,2 +1,3 @@
-/PlantControl.Models/bin/
-/PlantControl.Models/obj/
+bin
+obj
+.idea

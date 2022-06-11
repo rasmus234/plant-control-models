@@ -7,7 +7,7 @@ public class LoggerConfig
     public Soil Soil { get; set; }
 }
 
-public record class Logging(string LoggerId, bool Active, string SocketUrl, string RestUrl, string PairingId)
+public record Logging(string LoggerId, bool Active, string SocketUrl, string RestUrl, string PairingId)
 {
     public string LoggerId { get; } = LoggerId;
     public bool Active { get; } = Active;
@@ -16,7 +16,7 @@ public record class Logging(string LoggerId, bool Active, string SocketUrl, stri
     public string PairingId { get; } = PairingId;
 }
 
-public record class Air(float MinHumid, float MaxHumid, float MinTemp, float MaxTemp)
+public record Air(float MinHumid, float MaxHumid, float MinTemp, float MaxTemp)
 {
     public float MinHumid { get; set; } = MinHumid;
     public float MaxHumid { get; set; } = MaxHumid;
@@ -24,7 +24,7 @@ public record class Air(float MinHumid, float MaxHumid, float MinTemp, float Max
     public float MaxTemp { get; set; } = MaxTemp;
 }
 
-public record class Soil(float Moist, float Dry)
+public record Soil(float Moist, float Dry)
 {
     public float Moist { get; set; } = Moist;
     public float Dry { get; set; } = Dry;
