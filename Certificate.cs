@@ -1,31 +1,31 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace PlantControl.Models;
 
 public class Certificate
 {
-    [JsonProperty("plant")] public Plant Plant { get; set; }
+    [JsonPropertyName("plant")] public Plant Plant { get; set; }
 
-    [JsonProperty("temperature")] public Data Temperature { get; set; }
+    [JsonPropertyName("temperature")] public Data Temperature { get; set; }
 
-    [JsonProperty("humidity")] public Data Humidity { get; set; }
+    [JsonPropertyName("humidity")] public Data Humidity { get; set; }
 
-    [JsonProperty("moisture")] public Data Moisture { get; set; }
+    [JsonPropertyName("moisture")] public Data Moisture { get; set; }
 
-    [JsonProperty("_id")] public string Id { get; set; }
+    [JsonPropertyName("_id")] public string Id { get; set; }
 
-    [JsonProperty("createdAt")] public DateTimeOffset CreatedAt { get; set; }
+    [JsonPropertyName("createdAt")] public DateTimeOffset CreatedAt { get; set; }
 
-    [JsonProperty("__v")] public long V { get; set; }
+    [JsonPropertyName("__v")] public long V { get; set; }
 }
 
 public class Data
 {
-    [JsonProperty("avg")] public long Avg { get; set; }
+    [JsonPropertyName("avg")] public long Avg { get; set; }
 
-    [JsonProperty("min")] public long Min { get; set; }
+    [JsonPropertyName("min")] public long Min { get; set; }
 
-    [JsonProperty("max")] public long Max { get; set; }
+    [JsonPropertyName("max")] public long Max { get; set; }
 
-    [JsonProperty("_id")] public string Id { get; set; }
+    [JsonPropertyName("_id")] public string Id { get; set; }
 }

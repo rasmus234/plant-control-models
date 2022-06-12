@@ -1,20 +1,20 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace PlantControl.Models;
 
 public class Log
 {
-    [JsonProperty("temperature")] public long Temperature { get; set; }
+    [JsonPropertyName("temperature")] public long Temperature { get; set; }
 
-    [JsonProperty("humidity")] public long Humidity { get; set; }
+    [JsonPropertyName("humidity")] public long Humidity { get; set; }
 
-    [JsonProperty("moisture")] public long Moisture { get; set; }
+    [JsonPropertyName("moisture")] public long Moisture { get; set; }
 
-    [JsonProperty("pairing")] public string Pairing { get; set; }
+    [JsonPropertyName("pairing")] public string Pairing { get; set; }
 
-    [JsonProperty("_id")] public string Id { get; set; }
+    [JsonPropertyName("_id")] public string Id { get; set; }
 
-    [JsonProperty("time")] public DateTimeOffset Time { get; set; }
+    [JsonPropertyName("time")] public DateTimeOffset Time { get; set; }
 
-    [JsonProperty("__v")] public long V { get; set; }
+    [JsonPropertyName("__v")] public long V { get; set; }
 }

@@ -1,43 +1,43 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace PlantControl.Models;
 
 public class Config
 {
-    [JsonProperty("Logging")] public Logging Logging { get; set; }
+    [JsonPropertyName("Logging")] public Logging Logging { get; set; }
 
-    [JsonProperty("Air")] public Air Air { get; set; }
+    [JsonPropertyName("Air")] public Air Air { get; set; }
 
-    [JsonProperty("Soil")] public Soil Soil { get; set; }
+    [JsonPropertyName("Soil")] public Soil Soil { get; set; }
 }
 
 public class Air
 {
-    [JsonProperty("MinHumid")] public long MinHumid { get; set; }
+    [JsonPropertyName("MinHumid")] public double MinHumid { get; set; }
 
-    [JsonProperty("MaxHumid")] public long MaxHumid { get; set; }
+    [JsonPropertyName("MaxHumid")] public double MaxHumid { get; set; }
 
-    [JsonProperty("MinTemp")] public long MinTemp { get; set; }
+    [JsonPropertyName("MinTemp")] public double MinTemp { get; set; }
 
-    [JsonProperty("MaxTemp")] public long MaxTemp { get; set; }
+    [JsonPropertyName("MaxTemp")] public double MaxTemp { get; set; }
 }
 
 public class Logging
 {
-    [JsonProperty("LoggerId")] public string LoggerId { get; set; }
+    [JsonPropertyName("LoggerId")] public string LoggerId { get; set; }
 
-    [JsonProperty("PairingId")] public string PairingId { get; set; }
+    [JsonPropertyName("PairingId")] public string PairingId { get; set; }
 
-    [JsonProperty("Active")] public bool Active { get; set; }
+    [JsonPropertyName("Active")] public bool Active { get; set; }
 
-    [JsonProperty("SocketUrl")] public string SocketUrl { get; set; }
+    [JsonPropertyName("SocketUrl")] public string SocketUrl { get; set; }
 
-    [JsonProperty("RestUrl")] public string RestUrl { get; set; }
+    [JsonPropertyName("RestUrl")] public string RestUrl { get; set; }
 }
 
 public class Soil
 {
-    [JsonProperty("Moist")] public double Moist { get; set; }
+    [JsonPropertyName("Moist")] public double Moist { get; set; }
 
-    [JsonProperty("Dry")] public double Dry { get; set; }
+    [JsonPropertyName("Dry")] public double Dry { get; set; }
 }
