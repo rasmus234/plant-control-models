@@ -4,11 +4,11 @@ namespace PlantControl.Models;
 
 public class Log
 {
-    [JsonPropertyName("temperature")] public long Temperature { get; set; }
+    [JsonPropertyName("temperature")] public double Temperature { get; set; }
 
-    [JsonPropertyName("humidity")] public long Humidity { get; set; }
+    [JsonPropertyName("humidity")] public double Humidity { get; set; }
 
-    [JsonPropertyName("moisture")] public long Moisture { get; set; }
+    [JsonPropertyName("moisture")] public double Moisture { get; set; }
 
     [JsonPropertyName("pairing")] public string Pairing { get; set; }
 
